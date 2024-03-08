@@ -18,6 +18,19 @@
 body {
   color: var(--mint);
   background: var(--dark);
+  line-height: 1.1;
+}
+
+.transparent-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.not-transparent-text {
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
 }
 
 @layer utilities {

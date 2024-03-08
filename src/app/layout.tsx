@@ -4,7 +4,7 @@ import Cursor from '@/components/Cursor';
 
 import './globals.css';
 
-const suisseintl = localFont({
+const SuisseIntl = localFont({
   src: [
     {
       path: '../../public/fonts/SuisseIntl-Light.woff2',
@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={suisseintl.className}>
+      <body className={SuisseIntl.className}>
         {children}
         <Cursor />
       </body>
