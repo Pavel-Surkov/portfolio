@@ -21,7 +21,7 @@ const config: Config = {
         black: '#000',
       },
       fontSize: {
-        large: '7.5vw',
+        large: '7vw',
       },
     },
   },

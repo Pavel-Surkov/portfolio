@@ -10,7 +10,7 @@ function Stars() {
 
   const sphere = useMemo(
     () =>
-      random.inSphere(new Float32Array(3 * 540), {
+      random.inSphere(new Float32Array(3 * 320), {
         radius: 5,
       }) as Float32Array,
     []

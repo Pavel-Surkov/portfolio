@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import Cursor from '@/components/Cursor';
 
 import './globals.css';
+import LocomotiveScroll from '@/components/LocomotiveScroll';
 
 const SuisseIntl = localFont({
   src: [
@@ -48,8 +49,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={SuisseIntl.className}>
-        {children}
         <Cursor />
+        <LocomotiveScroll />
+        {children}
       </body>
     </html>
   );
