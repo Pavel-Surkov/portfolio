@@ -1,45 +1,46 @@
 'use client';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-import { useLayoutEffect, useRef } from 'react';
+import { useRef } from 'react';
 import Project from '@/components/Project';
+import { useGSAP } from '@gsap/react';
 
 export default function Portfolio() {
   const sectionRef = useRef<HTMLElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
-    if (sliderRef.current && sectionRef.current && progressRef.current) {
-      gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
-      const mainTimeline = gsap.timeline({
+    const mainTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: 1,
+      },
+    });
+
+    mainTimeline.to(sliderRef.current, {
+      x:
+        -(sliderRef.current?.offsetWidth ?? 0) +
+        (sectionRef.current?.offsetWidth ?? 0),
+      ease: 'none',
+    });
+
+    gsap
+      .timeline({
         scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top top',
-          end: 'bottom bottom',
-          scrub: 1,
+          trigger: sliderRef.current,
+          start: 'left left',
+          end: 'right right',
+          scrub: true,
+          containerAnimation: mainTimeline,
         },
-      });
-
-      mainTimeline.to(sliderRef.current, {
-        x: -sliderRef.current.offsetWidth + sectionRef.current.offsetWidth,
-        ease: 'none',
-      });
-
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: sliderRef.current,
-            start: 'left left',
-            end: 'right right',
-            scrub: true,
-            containerAnimation: mainTimeline,
-          },
-        })
-        .fromTo(progressRef.current, { scaleX: 0 }, { scaleX: 1 });
-    }
-  }, [sliderRef, sectionRef, progressRef]);
+      })
+      .fromTo(progressRef.current, { scaleX: 0 }, { scaleX: 1 });
+  });
 
   return (
     <section

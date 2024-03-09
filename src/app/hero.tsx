@@ -1,33 +1,32 @@
 'use client';
 import StarsCanvas from '@/components/canvas/Stars';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useLayoutEffect, useRef } from 'react';
+import { useRef } from 'react';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef(null);
 
-  useLayoutEffect(() => {
-    if (sectionRef.current && titleRef.current) {
-      gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top',
-          end: `+=${sectionRef.current.offsetHeight}`,
-          scrub: true,
-        },
-      });
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top',
+        end: `+=${sectionRef.current?.offsetHeight}`,
+        scrub: true,
+      },
+    });
 
-      timeline.fromTo(
-        titleRef.current,
-        { scale: 1, translateY: 0 },
-        { scale: 0.8, translateY: -200 }
-      );
-    }
-  }, [sectionRef, titleRef]);
+    timeline.fromTo(
+      titleRef.current,
+      { scale: 1, translateY: 0 },
+      { scale: 0.8, translateY: -200 }
+    );
+  });
 
   return (
     <section
