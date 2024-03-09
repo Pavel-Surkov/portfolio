@@ -24,7 +24,7 @@ function Stars() {
   });
 
   return (
-    <group rotation={[0, 0, 0]}>
+    <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={pointsRef} positions={sphere} stride={3} frustumCulled>
         <PointMaterial
           transparent

@@ -13,7 +13,7 @@ export default function Cursor() {
     if (!cursorRef.current) return;
 
     document.addEventListener('mousemove', (e) => {
-      setCursorCoords({ x: e.pageX, y: e.pageY });
+      setCursorCoords({ x: e.clientX, y: e.clientY });
     });
 
     document.addEventListener('mousedown', () => {
@@ -26,7 +26,7 @@ export default function Cursor() {
 
     return () => {
       document.removeEventListener('mousemove', (e) => {
-        setCursorCoords({ x: e.pageX, y: e.pageY });
+        setCursorCoords({ x: e.clientX, y: e.clientY });
       });
 
       document.removeEventListener('mousedown', () => {

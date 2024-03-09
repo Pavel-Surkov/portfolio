@@ -20,6 +20,9 @@ const config: Config = {
         white: '#FFF',
         black: '#000',
       },
+      fontSize: {
+        large: '7.5vw',
+      },
     },
   },
   plugins: [],
