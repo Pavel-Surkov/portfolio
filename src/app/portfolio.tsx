@@ -2,6 +2,7 @@
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import { useLayoutEffect, useRef } from 'react';
+import Project from '@/components/Project';
 
 export default function Portfolio() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -56,12 +57,10 @@ export default function Portfolio() {
           ref={sliderRef}
           className="container relative flex h-screen w-[5000px] flex-grow items-stretch gap-10 py-[5vh]"
         >
-          <div className="vertical relative flex rotate-180 justify-end pl-10 text-[14vh] font-semibold uppercase text-black">
-            Portfolio
+          <div className="vertical relative flex rotate-180 justify-end pl-10 text-[14vh] font-semibold uppercase tracking-wide text-black">
+            Projects
           </div>
-          <div className="rounded-2xl border border-black p-10 text-black">
-            Element
-          </div>
+          <Project />
         </div>
       </div>
     </section>
