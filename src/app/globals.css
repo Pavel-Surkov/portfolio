@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --white: #fff;
   --dark: #000;
   --violet: #836fff;
   --mint: #15f5ba;
@@ -31,6 +32,16 @@ body {
   background-clip: unset;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
+}
+
+.stroke-text {
+  color: transparent;
+  -webkit-text-stroke-width: thin;
+  -webkit-text-stroke-color: var(--white);
+}
+
+.vertical {
+  writing-mode: vertical-rl;
 }
 
 @layer utilities {

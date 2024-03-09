@@ -28,6 +28,7 @@ export default function Hero() {
       );
     }
   }, [sectionRef, titleRef]);
+
   return (
     <section
       ref={sectionRef}
