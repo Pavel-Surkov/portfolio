@@ -71,10 +71,10 @@ export default function Projects({ data }: Props) {
   return (
     <section
       ref={sectionRef}
-      className="bg-dark max-w-screen relative z-10"
+      className="max-w-screen bg-gray relative z-10"
       style={{ height: sliderWidth.current ?? 0 }}
     >
-      <div className="sticky top-0 flex flex-col overflow-hidden bg-white">
+      <div className="sticky top-0 flex flex-col overflow-hidden">
         <div className="relative h-4">
           <div
             ref={progressRef}

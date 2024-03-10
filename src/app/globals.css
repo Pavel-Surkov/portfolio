@@ -44,6 +44,10 @@ body {
   writing-mode: vertical-rl;
 }
 
+.colored-shadow {
+  box-shadow: 0 -16px 20px attr(data-shadow);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

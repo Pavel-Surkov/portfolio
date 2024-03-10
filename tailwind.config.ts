@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-peach':
-          'linear-gradient(120deg,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );',
+          'linear-gradient(220deg,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );',
       },
       fontFamily: {
         suisse: ['var(--font-suisse-intl)'],
@@ -20,7 +20,7 @@ const config: Config = {
         violet: '#836FFF',
         mint: '#15F5BA',
         mixed: '#e32765',
-        gray: '#F0F3FF',
+        gray: { DEFAULT: '#F0F3FF', rich: '#767f86' },
         white: '#FFF',
         black: '#000',
       },

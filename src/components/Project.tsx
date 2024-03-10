@@ -21,7 +21,7 @@ export default function Project({ data }: Props) {
     gsap.to(imageRef.current, { scale: 1.01, borderRadius: 12, duration });
     gsap.to(projectRef.current, {
       scale: 1.01,
-      borderRadius: 18,
+      borderRadius: 24,
       duration,
     });
   }, []);
@@ -30,7 +30,7 @@ export default function Project({ data }: Props) {
     gsap.to(imageRef.current, { scale: 1, borderRadius: 8, duration });
     gsap.to(projectRef.current, {
       scale: 1,
-      borderRadius: 12,
+      borderRadius: 16,
       duration,
     });
   }, []);
@@ -38,7 +38,8 @@ export default function Project({ data }: Props) {
   return (
     <article
       ref={projectRef}
-      className="bg-gradient-peach border-box mr-10 w-[28dvw] flex-shrink-0 overflow-hidden rounded-xl text-black last:mr-0"
+      className="bg-gradient-peach border-box colored-shadow relative mr-10 w-[28dvw] flex-shrink-0 overflow-hidden rounded-2xl text-black shadow-xl last:mr-0"
+      data-shadow="#000"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -56,7 +57,7 @@ export default function Project({ data }: Props) {
         </h2>
         <Image
           ref={imageRef}
-          className="pointer-events-none h-auto w-full select-none rounded-lg"
+          className="rounded-xlg pointer-events-none h-auto w-full select-none"
           width={500}
           height={1200}
           src={data.image}

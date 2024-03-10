@@ -2,6 +2,7 @@ import { promises as fs } from 'fs';
 import Hero from './hero';
 import Projects from './projects';
 import { projectsSchema } from '@/schemas/project-schema';
+import EarthCanvas from '@/components/canvas/Earth';
 
 export default async function Home() {
   const file = await fs.readFile(
@@ -13,8 +14,10 @@ export default async function Home() {
   return (
     <main className="min-h-screen text-white">
       <Hero />
+      <section className="relative z-10 h-screen">
+        <EarthCanvas />
+      </section>
       <Projects data={data} />
-      <section className="relative z-10 h-screen bg-black"></section>
     </main>
   );
 }
