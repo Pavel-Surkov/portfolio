@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Cursor from '@/components/Cursor';
-import LocomotiveScroll from '@/components/LocomotiveScroll';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import './globals.css';
+import LenisScroll from '@/components/LenisScroll';
 
 const SuisseIntl = localFont({
   src: [
@@ -51,7 +51,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={SuisseIntl.className}>
         <Cursor />
-        <LocomotiveScroll />
+        <LenisScroll />
         {children}
         <SpeedInsights />
       </body>
