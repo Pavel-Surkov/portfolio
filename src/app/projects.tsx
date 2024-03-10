@@ -35,7 +35,7 @@ export default function Projects({ data }: Props) {
     if (sliderRef.current) {
       gsap.registerPlugin(ScrollTrigger);
 
-      const mainTimeline = gsap.timeline({
+      const mainTl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
@@ -44,7 +44,7 @@ export default function Projects({ data }: Props) {
         },
       });
 
-      mainTimeline.fromTo(
+      mainTl.fromTo(
         sliderRef.current,
         { xPercent: 0, left: '0%', ease: 'none' },
         {
@@ -61,7 +61,7 @@ export default function Projects({ data }: Props) {
             start: 'left left',
             end: 'right right',
             scrub: true,
-            containerAnimation: mainTimeline,
+            containerAnimation: mainTl,
           },
         })
         .fromTo(progressRef.current, { scaleX: 0 }, { scaleX: 1 });

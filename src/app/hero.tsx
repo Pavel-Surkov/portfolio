@@ -12,7 +12,7 @@ export default function Hero() {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const timeline = gsap.timeline({
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
         start: 'top',
@@ -21,7 +21,7 @@ export default function Hero() {
       },
     });
 
-    timeline.fromTo(
+    tl.fromTo(
       titleRef.current,
       { scale: 1, translateY: 0 },
       { scale: 0.8, translateY: -200 }
