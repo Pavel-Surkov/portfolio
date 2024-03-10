@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-peach':
-          'linear-gradient(320deg,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );',
+          'linear-gradient(120deg,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );',
       },
       fontFamily: {
         suisse: ['var(--font-suisse-intl)'],
@@ -25,12 +25,12 @@ const config: Config = {
         black: '#000',
       },
       fontSize: {
-        large: '7vw',
+        large: '7dvw',
       },
       container: {
         center: true,
         padding: {
-          DEFAULT: '3vw',
+          DEFAULT: '3dvw',
         },
         screens: {
           sm: '100%',
