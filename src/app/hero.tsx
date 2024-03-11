@@ -33,17 +33,16 @@ export default function Hero() {
       ref={sectionRef}
       className="relative flex h-screen items-center justify-center"
     >
-      <StarsCanvas />
       <div ref={titleRef} className="fixed z-0">
-        <h1 className=" transparent-text text-large grid grid-cols-[repeat(3,auto)] gap-x-2 font-bold lg:gap-x-6">
+        <h1 className=" transparent-text grid grid-cols-[repeat(3,auto)] gap-x-2 text-large font-bold lg:gap-x-6">
           <div className="col-span-2 col-start-2 flex gap-x-2 lg:gap-x-6">
             <span className="transparent-text inline-block bg-white">I'm</span>
-            <span className="transparent-text bg-violet inline-block">
+            <span className="transparent-text inline-block bg-violet">
               Pavel
             </span>
           </div>
           <span className="transparent-text inline-block bg-white">A</span>
-          <span className="transparent-text bg-mixed inline-block">
+          <span className="transparent-text inline-block bg-mixed">
             Frontend
           </span>
           <span className="transparent-text inline-block bg-white">
@@ -51,7 +50,7 @@ export default function Hero() {
           </span>
           <div className="col-start-3 flex gap-x-2 lg:gap-x-6">
             <span className="transparent-text inline-block bg-white">for</span>
-            <span className="transparent-text bg-mint inline-block">you</span>
+            <span className="transparent-text inline-block bg-mint">you</span>
           </div>
         </h1>
       </div>

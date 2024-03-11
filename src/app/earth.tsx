@@ -29,10 +29,7 @@ export default function Earth() {
   });
 
   return (
-    <section
-      ref={sectionRef}
-      className="from-violet to-mint relative h-[300vh] bg-gradient-to-b"
-    >
+    <section ref={sectionRef} className="relative h-[300vh]">
       <div className="sticky top-0 h-screen">
         {tl && <EarthCanvas tl={tl} />}
       </div>

@@ -3,6 +3,7 @@ import Hero from './hero';
 import Projects from './projects';
 import { projectsSchema } from '@/schemas/project-schema';
 import Earth from './earth';
+import StarsCanvas from '@/components/canvas/StarsCanvas';
 
 export default async function Home() {
   const file = await fs.readFile(
@@ -13,9 +14,13 @@ export default async function Home() {
 
   return (
     <main className="text-white">
-      {/* <Hero /> */}
-      <Earth />
-      {/* <Projects data={data} /> */}
+      <div className="relative">
+        <StarsCanvas />
+        <Hero />
+        <Earth />
+      </div>
+
+      <Projects data={data} />
     </main>
   );
 }
