@@ -20,9 +20,8 @@ export default function Earth() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
-          end: 'bottom bottom',
+          end: 'bottom top',
           scrub: true,
-          markers: true,
         },
       })
     );

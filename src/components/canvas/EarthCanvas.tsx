@@ -23,16 +23,17 @@ function Earth({ tl }: Props) {
 
   useGSAP(() => {
     if (ref.current) {
-      tl.fromTo(
-        ref.current.position,
-        { x: 3, y: 1.4, z: 0, ease: 'none' },
-        { x: -0.7, y: -0.7, z: 0, ease: 'none' }
-      );
+      tl.to(ref.current.position, { x: -2, y: -2, z: 0, ease: 'none' });
     }
   });
 
   return (
-    <group ref={ref} dispose={null} rotation={[0.4, 0, 0.85]}>
+    <group
+      ref={ref}
+      dispose={null}
+      position={[3, 1.4, 0]}
+      rotation={[0.4, 0, 0.85]}
+    >
       <group ref={innerRef}>
         <mesh>
           <ambientLight intensity={2} />

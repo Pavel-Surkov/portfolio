@@ -38,7 +38,7 @@ export default function Project({ data }: Props) {
   return (
     <article
       ref={projectRef}
-      className="border-box colored-shadow relative mr-10 w-[28dvw] flex-shrink-0 overflow-hidden rounded-2xl text-black shadow-xl last:mr-0"
+      className="border-box colored-shadow relative mr-8 w-[28dvw] flex-shrink-0 overflow-hidden rounded-2xl text-black shadow-xl last:mr-0"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -46,7 +46,7 @@ export default function Project({ data }: Props) {
         href={data.link}
         rel="noopener noreferrer"
         target="_blank"
-        className="flex flex-col p-8 pb-0"
+        className="flex flex-col px-4 pb-0"
       >
         <h2
           ref={titleRef}
@@ -56,7 +56,7 @@ export default function Project({ data }: Props) {
         </h2>
         <Image
           ref={imageRef}
-          className="rounded-xlg pointer-events-none h-auto w-full select-none"
+          className="pointer-events-none h-auto w-full select-none rounded-lg"
           width={500}
           height={1200}
           src={data.image}
