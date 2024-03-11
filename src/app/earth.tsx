@@ -29,7 +29,7 @@ export default function Earth() {
   });
 
   return (
-    <section ref={sectionRef} className="relative h-[300vh]">
+    <section ref={sectionRef} className="relative h-[400vh]">
       <div className="sticky top-0 h-screen">
         {tl && <EarthCanvas tl={tl} />}
       </div>

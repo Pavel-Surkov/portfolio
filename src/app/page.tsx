@@ -19,7 +19,6 @@ export default async function Home() {
         <Hero />
         <Earth />
       </div>
-
       <Projects data={data} />
     </main>
   );

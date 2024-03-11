@@ -8,19 +8,18 @@ import * as THREE from 'three';
 function Stars() {
   const pointsRef = useRef<THREE.Points>(null);
 
-  // TODO: make this static 2d canvas background
   const sphere = useMemo(
     () =>
-      random.inSphere(new Float32Array(3 * 450), {
-        radius: 4,
+      random.inSphere(new Float32Array(3 * 380), {
+        radius: 5,
       }) as Float32Array,
     []
   );
 
   useFrame((_, delta) => {
     if (pointsRef.current) {
-      pointsRef.current.rotation.x -= delta / 40;
-      pointsRef.current.rotation.y -= delta / 40;
+      pointsRef.current.rotation.x -= delta / 30;
+      pointsRef.current.rotation.y -= delta / 30;
     }
   });
 
@@ -31,7 +30,7 @@ function Stars() {
           scale={0.5}
           transparent
           color="#fff"
-          size={0.005}
+          size={0.012}
           sizeAttenuation={true}
           depthWrite={false}
         />
@@ -42,7 +41,7 @@ function Stars() {
 
 export default function StarsCanvas() {
   return (
-    <div className="absolute inset-0 z-[-1] h-full w-full">
+    <div className="fixed inset-0 z-[-1] h-screen w-full">
       <Canvas>
         <Suspense fallback={null}>
           <Stars />

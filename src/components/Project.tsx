@@ -38,8 +38,7 @@ export default function Project({ data }: Props) {
   return (
     <article
       ref={projectRef}
-      className="bg-gradient-peach border-box colored-shadow relative mr-10 w-[28dvw] flex-shrink-0 overflow-hidden rounded-2xl text-black shadow-xl last:mr-0"
-      data-shadow="#000"
+      className="border-box colored-shadow relative mr-10 w-[28dvw] flex-shrink-0 overflow-hidden rounded-2xl text-black shadow-xl last:mr-0"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -51,7 +50,7 @@ export default function Project({ data }: Props) {
       >
         <h2
           ref={titleRef}
-          className="text-dark mb-4 text-xl font-semibold tracking-wider mix-blend-difference"
+          className="mb-4 text-xl font-semibold tracking-wider text-white mix-blend-difference"
         >
           {data.title}
         </h2>

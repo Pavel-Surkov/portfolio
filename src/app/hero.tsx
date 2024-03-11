@@ -24,8 +24,8 @@ export default function Hero() {
     tl.fromTo(
       titleRef.current,
       { scale: 1, translateY: 0 },
-      { scale: 0.8, translateY: -200 }
-    );
+      { scale: 0.75, translateY: 100 }
+    ).to(titleRef.current, { opacity: 0 });
   });
 
   return (

@@ -13,10 +13,11 @@ type Props = {
 function Earth({ tl }: Props) {
   const gltf = useGLTF('models/earth/scene.gltf');
   const ref = useRef<Group>(null);
+  const innerRef = useRef<Group>(null);
 
   useFrame((_, delta) => {
-    if (ref.current) {
-      ref.current.rotation.y += delta / 6;
+    if (innerRef.current) {
+      innerRef.current.rotation.y += delta / 6;
     }
   });
 
@@ -24,18 +25,20 @@ function Earth({ tl }: Props) {
     if (ref.current) {
       tl.fromTo(
         ref.current.position,
-        { x: 3, y: 1.3, z: 0 },
-        { x: -0.5, y: -0.5, z: 0 }
+        { x: 3, y: 1.4, z: 0, ease: 'none' },
+        { x: -0.7, y: -0.7, z: 0, ease: 'none' }
       );
     }
   });
 
   return (
-    <group ref={ref} dispose={null} rotation={[0, 0, 0.409]}>
-      <mesh>
-        <ambientLight intensity={1} />
-        <primitive object={gltf.scene} scale={1} />
-      </mesh>
+    <group ref={ref} dispose={null} rotation={[0.4, 0, 0.85]}>
+      <group ref={innerRef}>
+        <mesh>
+          <ambientLight intensity={2} />
+          <primitive object={gltf.scene} scale={1} />
+        </mesh>
+      </group>
     </group>
   );
 }
@@ -59,7 +62,7 @@ export default function EarthCanvas({ tl }: Props) {
         near={0.1}
         position={[3, 3, 0]}
       >
-        <directionalLight
+        {/* <directionalLight
           castShadow
           position={[10, 20, 15]}
           shadow-camera-right={8}
@@ -70,7 +73,7 @@ export default function EarthCanvas({ tl }: Props) {
           shadow-mapSize-height={1024}
           intensity={1.5}
           shadow-bias={-0.0001}
-        />
+        /> */}
       </PerspectiveCamera>
       <Earth tl={tl} />
     </Canvas>
