@@ -1,5 +1,5 @@
 'use client';
-import StarsCanvas from '@/components/canvas/Stars';
+import StarsCanvas from '@/components/canvas/StarsCanvas';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef } from 'react';
 import gsap from 'gsap';
