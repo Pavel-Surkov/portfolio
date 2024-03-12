@@ -21,6 +21,7 @@
 *::selection {
   color: var(--mixed);
   background: var(--mint);
+  font-display: optional;
 }
 
 body {
