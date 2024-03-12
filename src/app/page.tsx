@@ -17,7 +17,7 @@ export default async function Home() {
       <div className="relative">
         <StarsCanvas />
         <Hero />
-        <Earth />
+        {/* <Earth /> */}
       </div>
       <Projects data={data} />
     </main>
