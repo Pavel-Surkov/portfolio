@@ -25,9 +25,9 @@ const config: Config = {
         blue: '#071DE4',
         mint: '#15F5BA',
         mixed: '#e32765',
-        gray: { DEFAULT: '#F0F3FF', rich: '#767f86' },
+        gray: { DEFAULT: '#F0F3FF' },
         white: '#FFF',
-        black: '#09070c',
+        black: '#0b0b0e',
       },
       fontSize: {
         large: '7dvw',
