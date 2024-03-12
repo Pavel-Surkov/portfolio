@@ -11,6 +11,8 @@ const config: Config = {
       backgroundImage: {
         'gradient-peach':
           'linear-gradient(220deg,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );',
+        'gradient-line':
+          'linear-gradient(270deg, rgba(255, 255, 255, 0.2), #fff 50%, rgba(255, 255, 255, 0.2))',
       },
       fontFamily: {
         suisse: ['var(--font-suisse-intl)'],
@@ -22,7 +24,7 @@ const config: Config = {
         mixed: '#e32765',
         gray: { DEFAULT: '#F0F3FF', rich: '#767f86' },
         white: '#FFF',
-        black: '#000',
+        black: '#09070c',
       },
       fontSize: {
         large: '7dvw',

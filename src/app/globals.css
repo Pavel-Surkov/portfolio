@@ -9,6 +9,12 @@
   --mint: #15f5ba;
   --gray: #f0f3ff;
   --mixed: #e32765;
+  --gradient-line: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0.2),
+    #fff 50%,
+    rgba(255, 255, 255, 0.2)
+  );
 }
 
 *::selection {
@@ -44,8 +50,25 @@ body {
   writing-mode: vertical-rl;
 }
 
-.colored-shadow {
-  box-shadow: 0 -16px 20px attr(data-shadow);
+.link {
+  position: relative;
+  display: inline-block;
+}
+
+.link::before {
+  position: absolute;
+  content: '';
+  top: calc(100% + 1px);
+  left: 0;
+  background: var(--gradient-line);
+  width: 100%;
+  height: 1px;
+  transform: scale(0);
+  transition: transform 0.3s ease-out;
+}
+
+.link:hover::before {
+  transform: scale(1);
 }
 
 @layer utilities {

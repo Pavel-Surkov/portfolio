@@ -5,6 +5,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import './globals.css';
 import LenisScroll from '@/components/LenisScroll';
+import Footer from './footer';
 
 const SuisseIntl = localFont({
   src: [
@@ -53,6 +54,7 @@ export default function RootLayout({
         <Cursor />
         <LenisScroll />
         {children}
+        <Footer />
         <SpeedInsights />
       </body>
     </html>
