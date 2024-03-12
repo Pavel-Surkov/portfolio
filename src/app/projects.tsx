@@ -86,7 +86,7 @@ export default function Projects({ data }: Props) {
           className="container relative box-border flex h-screen flex-grow items-stretch py-[5dvh]"
           style={{ width: sliderWidth.current ?? 0 }}
         >
-          <div className="vertical relative flex rotate-180 justify-end pl-10 text-[14dvh] font-semibold uppercase tracking-wide text-white">
+          <div className="vertical relative flex rotate-180 justify-end pl-10 text-[14dvh] font-black uppercase tracking-wide text-white">
             Projects
           </div>
           {data.projects.map((project) => (

@@ -11,8 +11,10 @@ const config: Config = {
       backgroundImage: {
         'gradient-peach':
           'linear-gradient(220deg,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );',
+        'gradient-blob-orange':
+          'conic-gradient(from 2.35rad,#e32765CC,rgba(7,29,228,.5))',
         'gradient-line':
-          'linear-gradient(270deg, rgba(255, 255, 255, 0.2), #fff 50%, rgba(255, 255, 255, 0.2))',
+          'linear-gradient(270deg, rgba(255, 255, 255, 0.25), #fff 50%, rgba(255, 255, 255, 0.25))',
       },
       fontFamily: {
         sequel: ['var(--font-sequel-sans)'],
@@ -20,6 +22,7 @@ const config: Config = {
       colors: {
         dark: '#211951',
         violet: '#836FFF',
+        blue: '#071DE4',
         mint: '#15F5BA',
         mixed: '#e32765',
         gray: { DEFAULT: '#F0F3FF', rich: '#767f86' },

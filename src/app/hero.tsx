@@ -33,13 +33,16 @@ export default function Hero() {
       className="relative flex h-screen items-center justify-center"
     >
       <div ref={titleRef} className="fixed z-0">
-        <h1 className="grid grid-cols-[repeat(3,auto)] gap-x-2 text-large font-bold text-gray lg:gap-x-6">
+        <h1 className="grid grid-cols-[repeat(3,auto)] gap-x-2 text-large font-bold text-gray lg:gap-x-6 [&_span]:relative [&_span]:z-10">
           <div className="col-span-2 col-start-2 flex gap-x-2 lg:gap-x-6">
             <span>I'm</span>
             <span>Pavel</span>
           </div>
           <span>A</span>
-          <span>Frontend</span>
+          <div className="relative">
+            <div className="bg-gradient-blob-orange absolute h-full w-full blur-[60px]" />
+            <span>Frontend</span>
+          </div>
           <span>Developer</span>
           <div className="col-start-3 flex gap-x-2 lg:gap-x-6">
             <span>for</span>

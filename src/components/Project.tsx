@@ -23,6 +23,7 @@ export default function Project({ data }: Props) {
       scale: 1.01,
       duration,
     });
+    gsap.to(titleRef.current, { y: 0, scale: 1 });
   }, []);
 
   const handleMouseLeave = useCallback(() => {
@@ -31,6 +32,7 @@ export default function Project({ data }: Props) {
       scale: 1,
       duration,
     });
+    gsap.to(titleRef.current, { y: 48, scale: 0.75 });
   }, []);
 
   return (
@@ -48,11 +50,11 @@ export default function Project({ data }: Props) {
       >
         <h2
           ref={titleRef}
-          className="mb-4 text-xl font-semibold tracking-wider text-white mix-blend-difference"
+          className="mb-3 translate-y-12 scale-75 text-center text-3xl font-bold tracking-wider text-white mix-blend-difference"
         >
           {data.title}
         </h2>
-        <div ref={imageRef} className="overflow-hidden rounded-lg">
+        <div ref={imageRef} className="relative overflow-hidden rounded-lg">
           <Image
             className="pointer-events-none h-auto w-full select-none"
             width={500}
