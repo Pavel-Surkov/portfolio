@@ -62,20 +62,7 @@ export default function EarthCanvas({ tl }: Props) {
         fov={30}
         near={0.1}
         position={[3, 3, 0]}
-      >
-        {/* <directionalLight
-          castShadow
-          position={[10, 20, 15]}
-          shadow-camera-right={8}
-          shadow-camera-top={8}
-          shadow-camera-left={-8}
-          shadow-camera-bottom={-8}
-          shadow-mapSize-width={1024}
-          shadow-mapSize-height={1024}
-          intensity={1.5}
-          shadow-bias={-0.0001}
-        /> */}
-      </PerspectiveCamera>
+      />
       <Earth tl={tl} />
     </Canvas>
   );
