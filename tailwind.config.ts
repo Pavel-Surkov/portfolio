@@ -15,7 +15,7 @@ const config: Config = {
           'linear-gradient(270deg, rgba(255, 255, 255, 0.2), #fff 50%, rgba(255, 255, 255, 0.2))',
       },
       fontFamily: {
-        suisse: ['var(--font-suisse-intl)'],
+        sequel: ['var(--font-sequel-sans)'],
       },
       colors: {
         dark: '#211951',
