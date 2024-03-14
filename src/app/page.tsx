@@ -4,6 +4,7 @@ import Projects from './projects';
 import { projectsSchema } from '@/schemas/project-schema';
 import Earth from './earth';
 import StarsCanvas from '@/components/canvas/StarsCanvas';
+import Skills from './skills';
 
 export default async function Home() {
   const file = await fs.readFile(
@@ -20,6 +21,7 @@ export default async function Home() {
         <Earth />
       </div>
       <Projects data={data} />
+      <Skills />
     </main>
   );
 }

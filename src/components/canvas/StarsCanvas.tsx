@@ -4,11 +4,9 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Suspense, useEffect, useMemo, useRef } from 'react';
 import * as random from 'maath/random/dist/maath-random.esm';
 import * as THREE from 'three';
-import gsap from 'gsap';
 
 function Stars() {
   const pointsRef = useRef<THREE.Points>(null);
-  const groupRef = useRef<THREE.Group>(null);
 
   const sphere = useMemo(
     () =>
@@ -18,36 +16,6 @@ function Stars() {
     []
   );
 
-  useEffect(() => {
-    document.addEventListener('mousemove', (e: MouseEvent) => {
-      const mouseX = e.pageX / window.innerWidth - 1;
-      const mouseY = -(e.pageY / window.innerWidth) + 1;
-
-      if (groupRef.current) {
-        gsap.to(groupRef.current.rotation, {
-          x: mouseX / 5,
-          y: mouseY / 5,
-          duration: 0.6,
-        });
-      }
-    });
-
-    return () => {
-      document.removeEventListener('mousemove', (e: MouseEvent) => {
-        const mouseX = e.pageX / window.innerWidth - 1;
-        const mouseY = -(e.pageY / window.innerWidth) + 1;
-
-        if (groupRef.current) {
-          gsap.to(groupRef.current.rotation, {
-            x: mouseX / 5,
-            y: mouseY / 5,
-            duration: 0.6,
-          });
-        }
-      });
-    };
-  }, []);
-
   useFrame((_, delta) => {
     if (pointsRef.current) {
       pointsRef.current.rotation.x -= delta / 20;
@@ -56,7 +24,7 @@ function Stars() {
   });
 
   return (
-    <group ref={groupRef}>
+    <group>
       <Points ref={pointsRef} positions={sphere} stride={3} frustumCulled>
         <PointMaterial
           scale={0.5}

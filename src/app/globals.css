@@ -19,8 +19,8 @@
 }
 
 *::selection {
-  color: var(--mixed);
-  background: var(--mint);
+  color: var(--dark);
+  background: var(--gray);
   font-display: optional;
 }
 

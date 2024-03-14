@@ -3,14 +3,14 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-black pb-10 pt-10 text-gray">
+    <footer className="h-40 bg-black pb-10 pt-10 text-gray">
       <div className="container">
         <div className="flex justify-center">
           <div>
             <p className="mb-4 text-center text-sm uppercase tracking-wider">
               Novosibirsk, {format(new Date(), 'p OOOO')}
             </p>
-            <div className="bg-gradient-line mb-6 h-px w-full" />
+            <div className="mb-6 h-px w-full bg-gradient-line" />
             <nav className="flex gap-10 font-light">
               <Link
                 href="mailto:surkovv.pavel@gmail.com"
