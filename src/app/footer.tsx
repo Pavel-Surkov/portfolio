@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container">
         <div className="flex justify-center">
           <div>
-            <p className="mb-4 text-center text-sm uppercase tracking-wider">
+            <p className="mb-4 text-center text-sm tracking-wider">
               Novosibirsk, {format(new Date(), 'p OOOO')}
             </p>
             <div className="mb-6 h-px w-full bg-gradient-line" />

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --yellow: #ffff82;
   --white: #fff;
   --dark: #000;
   --violet: #836fff;
@@ -48,6 +49,13 @@ body {
   -webkit-text-stroke-color: var(--white);
 }
 
+.stroke-text-yellow {
+  color: transparent;
+  -webkit-text-stroke-width: thin;
+  -webkit-text-stroke-color: var(--yellow);
+  letter-spacing: 0.045em;
+}
+
 .vertical {
   writing-mode: vertical-rl;
 }
@@ -71,6 +79,24 @@ body {
 
 .link:hover::before {
   transform: scale(1);
+}
+
+.titles {
+  transform: translateX(-50%) perspective(300px) rotateX(25deg);
+  transform-origin: 50% 100%;
+  font-weight: bold;
+  overflow: hidden;
+  height: 350vh;
+  width: 80vw;
+  bottom: 0;
+  left: 50%;
+  position: absolute;
+}
+
+@media screen and (max-height: 900px) {
+  .titles {
+    transform: translateX(-50%) perspective(220px) rotateX(25deg);
+  }
 }
 
 @layer utilities {

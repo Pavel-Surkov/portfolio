@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sequel: 'var(--font-sequel-sans)',
+        star: 'var(--font-star-jedi)',
+      },
       backgroundImage: {
         'gradient-peach':
           'linear-gradient(220deg,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );',
@@ -16,10 +20,8 @@ const config: Config = {
         'gradient-line':
           'linear-gradient(270deg, rgba(255, 255, 255, 0.25), #fff 50%, rgba(255, 255, 255, 0.25))',
       },
-      fontFamily: {
-        sequel: ['var(--font-sequel-sans)'],
-      },
       colors: {
+        yellow: '#FFFF82',
         dark: '#211951',
         violet: '#836FFF',
         blue: '#071DE4',
