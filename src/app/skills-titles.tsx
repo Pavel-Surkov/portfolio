@@ -1,68 +1,68 @@
-import SkillsBlock from '@/components/SkillsBlock';
+'use client';
+
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useRef } from 'react';
 
 const SKILLS = [
-  'HTML',
   'Typescript',
   'React',
   'Next.js',
-  'Javascript',
   'Webpack',
   'GSAP',
   'Three.js',
-  'Prisma',
-  'Auth.js',
-  'TailwindCSS',
-  'Vite',
-  'CSS',
-  'Zod',
+  'Tailwind CSS',
   'Svelte',
-  'SCSS',
-  'PostgreSQL',
+  'Prisma',
   'React Query',
-  'SvelteKit',
+  'Auth.js',
 ] as const;
 
 export default function SkillsTitles() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true,
+        markers: true,
+      },
+    });
+
+    tl.fromTo(
+      skillsRef.current,
+      {
+        yPercent: 100,
+      },
+      { yPercent: -100 }
+    );
+  });
+
   return (
-    <section className="relative min-h-screen">
-      <h2 className="font-star stroke-text-yellow pt-[5vh] text-center text-[8vw]">
-        Skills
-      </h2>
-      <div className="titles">
-        <SkillsBlock>
-          <div className="flex flex-wrap items-start justify-center gap-x-16 gap-y-10">
-            {SKILLS.map((skill) => (
-              <span key={skill}>{skill}</span>
-            ))}
+    <section ref={sectionRef} className="relative h-[300vh]">
+      <div className="sticky top-0 h-screen">
+        <h2 className="font-star stroke-text-yellow pt-[5vh] text-center text-[8vw]">
+          Skills
+        </h2>
+        <div className="titles">
+          <div
+            ref={skillsRef}
+            className="text-yellow flex flex-col gap-10 text-[14vw]"
+          >
+            <div className="flex flex-col items-center justify-center gap-24">
+              {SKILLS.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-wrap items-start justify-center gap-x-16 gap-y-10">
-            {SKILLS.map((skill) => (
-              <span key={skill}>{skill}</span>
-            ))}
-          </div>
-          <div className="flex flex-wrap items-start justify-center gap-x-16 gap-y-10">
-            {SKILLS.map((skill) => (
-              <span key={skill}>{skill}</span>
-            ))}
-          </div>
-        </SkillsBlock>
-        <SkillsBlock>
-          <div className="flex flex-wrap items-start justify-center gap-x-16 gap-y-10">
-            {SKILLS.map((skill) => (
-              <span key={skill}>{skill}</span>
-            ))}
-          </div>
-          <div className="flex flex-wrap items-start justify-center gap-x-16 gap-y-10">
-            {SKILLS.map((skill) => (
-              <span key={skill}>{skill}</span>
-            ))}
-          </div>
-          <div className="flex flex-wrap items-start justify-center gap-x-16 gap-y-10">
-            {SKILLS.map((skill) => (
-              <span key={skill}>{skill}</span>
-            ))}
-          </div>
-        </SkillsBlock>
+        </div>
       </div>
     </section>
   );

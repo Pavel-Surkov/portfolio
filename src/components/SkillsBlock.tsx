@@ -29,7 +29,7 @@ export default function SkillsBlock({ children }: Props) {
   });
 
   return (
-    <div ref={ref} className="text-yellow flex flex-col gap-10 text-[7vw]">
+    <div ref={ref} className="text-yellow flex flex-col gap-10 text-[10vw]">
       {children}
     </div>
   );
