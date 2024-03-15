@@ -4,8 +4,8 @@ import Projects from './projects';
 import { projectsSchema } from '@/schemas/project-schema';
 import Earth from './earth';
 import StarsCanvas from '@/components/canvas/StarsCanvas';
+import Resume from './resume';
 import Skills from './skills';
-import SkillsTitles from './skills-titles';
 
 export default async function Home() {
   const file = await fs.readFile(
@@ -18,12 +18,12 @@ export default async function Home() {
     <main className="text-white">
       <div className="relative">
         <StarsCanvas />
-        <Hero />
+        {/* <Hero /> */}
         <Earth />
       </div>
       <Projects data={data} />
-      <SkillsTitles />
       <Skills />
+      <Resume />
     </main>
   );
 }

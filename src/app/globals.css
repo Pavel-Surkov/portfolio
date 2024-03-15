@@ -53,7 +53,7 @@ body {
   color: transparent;
   -webkit-text-stroke-width: thin;
   -webkit-text-stroke-color: var(--yellow);
-  letter-spacing: 0.045em;
+  letter-spacing: 0.052em;
 }
 
 .vertical {
@@ -91,6 +91,10 @@ body {
   bottom: 0;
   left: 50%;
   position: absolute;
+}
+
+.word-space-lg {
+  word-spacing: 0.15em;
 }
 
 @media screen and (max-height: 900px) {

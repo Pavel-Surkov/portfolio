@@ -23,7 +23,7 @@ function Earth({ tl }: Props) {
 
   useGSAP(() => {
     if (ref.current) {
-      tl.to(ref.current.position, { x: -2, y: -2, z: 0, ease: 'none' });
+      tl.to(ref.current.position, { x: -2.2, y: -2.2, z: 0, ease: 'none' });
     }
   });
 
@@ -31,7 +31,7 @@ function Earth({ tl }: Props) {
     <group
       ref={ref}
       dispose={null}
-      position={[3, 1.4, 0]}
+      position={[3, 1.2, 0]}
       rotation={[0.4, 0, 0.85]}
     >
       <group ref={innerRef}>

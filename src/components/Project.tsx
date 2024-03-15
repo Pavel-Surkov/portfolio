@@ -56,7 +56,7 @@ export default function Project({ data }: Props) {
         </h2>
         <div ref={imageRef} className="relative overflow-hidden rounded-lg">
           <Image
-            className="pointer-events-none h-auto w-full select-none"
+            className="pointer-events-none relative h-auto w-full select-none"
             width={625}
             height={1875}
             src={data.image}

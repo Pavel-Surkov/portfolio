@@ -6,6 +6,7 @@ import Project from '@/components/Project';
 import { useGSAP } from '@gsap/react';
 import { z } from 'zod';
 import { projectsSchema } from '@/schemas/project-schema';
+import Link from 'next/link';
 
 type Props = {
   data: z.infer<typeof projectsSchema>;
@@ -92,6 +93,16 @@ export default function Projects({ data }: Props) {
           {data.projects.map((project) => (
             <Project data={project} key={project.title} />
           ))}
+          <article className="border-box colored-shadow relative mr-10 w-[28dvw] flex-shrink-0 pt-12 shadow-xl last:mr-0">
+            <div className="flex h-full flex-col rounded-2xl border border-[#FFFFFF22] bg-black pb-0">
+              <div className="relative grid h-full place-items-center rounded-lg">
+                <div className="text-center">
+                  <div className="text-[100px]">👀</div>
+                  <h2 className="mb-2 text-2xl">New porjects Coming Soon</h2>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>

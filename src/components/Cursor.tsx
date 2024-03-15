@@ -22,7 +22,6 @@ export default function Cursor() {
       gsap.to(cursorRef.current, {
         scale: 1.8,
         duration: 0.18,
-        opacity: 1,
         ease: 'power1',
       });
     });
@@ -31,7 +30,6 @@ export default function Cursor() {
       gsap.to(cursorRef.current, {
         scale: 1,
         duration: 0.18,
-        opacity: 0.8,
         ease: 'power1',
       });
     });
@@ -50,7 +48,6 @@ export default function Cursor() {
         gsap.to(cursorRef.current, {
           scale: 1.8,
           duration: 0.18,
-          opacity: 1,
           ease: 'power1',
         });
       });
@@ -59,7 +56,6 @@ export default function Cursor() {
         gsap.to(cursorRef.current, {
           scale: 1,
           duration: 0.15,
-          opacity: 0.8,
           ease: 'power1',
         });
       });
@@ -69,7 +65,7 @@ export default function Cursor() {
   return (
     <div
       ref={cursorRef}
-      className="pointer-events-none fixed left-0 top-0 z-50 hidden h-4 w-4 select-none rounded-full bg-mixed opacity-80 md:inline-block"
+      className="pointer-events-none fixed left-0 top-0 z-50 hidden h-4 w-4 select-none rounded-full bg-white opacity-80 mix-blend-difference md:inline-block"
     />
   );
 }

@@ -13,10 +13,6 @@ const config: Config = {
         star: 'var(--font-star-jedi)',
       },
       backgroundImage: {
-        'gradient-peach':
-          'linear-gradient(220deg,  rgba(62,147,252,0.57) 12.9%, rgba(239,183,192,0.44) 91.2% );',
-        'gradient-blob-orange':
-          'conic-gradient(from 2.35rad,#e32765CC,rgba(7,29,228,.5))',
         'gradient-line':
           'linear-gradient(270deg, rgba(255, 255, 255, 0.25), #fff 50%, rgba(255, 255, 255, 0.25))',
       },

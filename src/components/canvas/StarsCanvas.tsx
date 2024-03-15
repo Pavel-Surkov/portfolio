@@ -29,7 +29,7 @@ function Stars() {
         <PointMaterial
           scale={0.5}
           transparent
-          color="#fff"
+          color="#f0f3ff"
           size={0.012}
           sizeAttenuation={true}
           depthWrite={false}
