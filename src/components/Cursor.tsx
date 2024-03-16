@@ -1,10 +1,11 @@
 'use client';
-
-import { useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { MobileContext } from './DeviceContext';
 
 export default function Cursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
+  const isMobile = useContext(MobileContext);
 
   useEffect(() => {
     if (!cursorRef.current) return;
@@ -64,7 +65,7 @@ export default function Cursor() {
     };
   }, [cursorRef]);
 
-  return (
+  return isMobile ? null : (
     <div
       ref={cursorRef}
       className="pointer-events-none fixed left-0 top-0 z-50 hidden h-4 w-4 select-none rounded-full bg-white mix-blend-difference md:inline-block"

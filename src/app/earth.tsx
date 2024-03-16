@@ -2,10 +2,12 @@
 import EarthCanvas from '@/components/canvas/EarthCanvas';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 import gsap from 'gsap';
+import { MobileContext } from '@/components/DeviceContext';
 
 export default function Earth() {
+  const isMobile = useContext(MobileContext);
   const sectionRef = useRef<HTMLElement>(null);
   const [tl, setTl] = useState<gsap.core.Timeline | null>(null);
 
@@ -27,7 +29,7 @@ export default function Earth() {
     );
   });
 
-  return (
+  return isMobile ? null : (
     <section ref={sectionRef} className="relative h-[400vh]">
       <div className="sticky top-0 h-screen">
         {tl && <EarthCanvas tl={tl} />}

@@ -1,5 +1,7 @@
-import { format } from 'date-fns';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+const Time = dynamic(() => import('@/components/Time'), { ssr: false });
 
 export default function Footer() {
   return (
@@ -7,9 +9,7 @@ export default function Footer() {
       <div className="container">
         <div className="flex justify-center">
           <div>
-            <p className="mb-4 text-center text-sm tracking-wider">
-              Novosibirsk, {format(new Date(), 'p OOOO')}
-            </p>
+            <Time />
             <div className="mb-6 h-px w-full bg-gradient-line" />
             <nav className="flex gap-10 font-light">
               <Link
