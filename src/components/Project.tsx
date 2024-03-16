@@ -38,7 +38,7 @@ export default function Project({ data }: Props) {
   return (
     <article
       ref={projectRef}
-      className="border-box colored-shadow relative mr-10 w-[28dvw] flex-shrink-0 rounded-2xl text-black shadow-xl last:mr-0"
+      className="border-box colored-shadow relative mr-10 aspect-[9/16] flex-shrink-0 rounded-2xl text-black shadow-xl last:mr-0"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -46,19 +46,23 @@ export default function Project({ data }: Props) {
         href={data.link}
         rel="noopener noreferrer"
         target="_blank"
-        className="flex max-h-full flex-col pb-0"
+        className="flex h-full flex-col pb-0"
       >
         <h2
           ref={titleRef}
-          className="mb-3 translate-y-12 scale-75 text-center text-3xl font-bold tracking-wider text-white mix-blend-difference"
+          className="mb-3 translate-y-12 scale-75 whitespace-nowrap text-center text-2xl font-bold tracking-wider text-white mix-blend-difference xl:text-3xl"
         >
           {data.title}
         </h2>
-        <div ref={imageRef} className="relative overflow-hidden rounded-lg">
+        <div
+          ref={imageRef}
+          className="relative h-full overflow-hidden rounded-lg"
+        >
           <Image
-            className="pointer-events-none relative h-auto w-full select-none"
+            className={`pointer-events-none relative w-full select-none object-cover ${data.type === 'poster' ? 'h-full' : 'h-auto'}`}
+            quality={100}
             width={625}
-            height={1875}
+            height={1111}
             src={data.image}
             alt={`${data.title} project capture`}
           />

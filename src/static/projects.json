@@ -3,17 +3,26 @@
     {
       "title": "TradeVibe",
       "image": "/images/tradevibe.jpeg",
-      "link": "https://dev.tradevibe.com"
+      "link": "https://dev.tradevibe.com",
+      "type": "screen"
     },
     {
       "title": "Snorelab",
       "image": "/images/snorelab.jpeg",
-      "link": "https://www.snorelab.com"
+      "link": "https://www.snorelab.com",
+      "type": "screen"
     },
     {
       "title": "Ch00ze PWA (mobile only)",
-      "image": "/images/tradevibe.jpeg",
-      "link": "https://app.ch00ze.co/"
+      "image": "/images/ch00ze.jpg",
+      "link": "https://app.ch00ze.co/",
+      "type": "poster"
+    },
+    {
+      "title": "Dendropark",
+      "image": "/images/dendropark.jpeg",
+      "link": "https://dendro-park.ru/katalog-rastenij",
+      "type": "screen"
     }
   ]
 }

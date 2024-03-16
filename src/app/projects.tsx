@@ -91,7 +91,7 @@ export default function Projects({ data }: Props) {
           {data.projects.map((project) => (
             <Project data={project} key={project.title} />
           ))}
-          <article className="border-box colored-shadow relative mr-10 w-[28dvw] flex-shrink-0 pt-12 shadow-xl last:mr-0">
+          <article className="border-box colored-shadow relative mr-10 aspect-[9/16] h-[calc(100%-48px)] flex-shrink-0 self-end rounded-2xl text-white shadow-xl last:mr-0">
             <div className="flex h-full flex-col rounded-2xl border border-[#FFFFFF22] bg-black pb-0">
               <div className="relative grid h-full place-items-center rounded-lg">
                 <div className="text-center">

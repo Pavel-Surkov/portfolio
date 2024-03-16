@@ -52,8 +52,8 @@ export default function Ticker({ items, direction = 'left' }: Props) {
         ref={tickerRefFirst}
         className="flex gap-x-24 px-12 will-change-transform"
       >
-        {items.map((item) => (
-          <p key={item} className="word-space-lg whitespace-nowrap">
+        {items.map((item, i) => (
+          <p key={`item_${i}`} className="word-space-lg whitespace-nowrap">
             {item}
           </p>
         ))}
@@ -62,8 +62,8 @@ export default function Ticker({ items, direction = 'left' }: Props) {
         ref={tickerRefSecond}
         className="flex gap-x-24 px-12 will-change-transform"
       >
-        {items.map((item) => (
-          <p key={item} className="word-space-lg whitespace-nowrap">
+        {items.map((item, i) => (
+          <p key={`item_${i}`} className="word-space-lg whitespace-nowrap">
             {item}
           </p>
         ))}
