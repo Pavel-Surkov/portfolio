@@ -1,9 +1,12 @@
+/* eslint @typescript-eslint/no-unsafe-call: 0 */
+/* eslint @typescript-eslint/no-unsafe-member-access: 0 */
+
 'use client';
 import { Points, PointMaterial, Preload } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Suspense, useEffect, useMemo, useRef } from 'react';
+import { Suspense, useMemo, useRef } from 'react';
 import * as random from 'maath/random/dist/maath-random.esm';
-import * as THREE from 'three';
+import type * as THREE from 'three';
 
 function Stars() {
   const pointsRef = useRef<THREE.Points>(null);

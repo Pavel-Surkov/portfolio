@@ -3,8 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { useCallback, useRef } from 'react';
-import { z } from 'zod';
-import { projectSchema } from '@/schemas/project-schema';
+import { type z } from 'zod';
+import { type projectSchema } from '@/schemas/project-schema';
 
 const duration = 0.3;
 

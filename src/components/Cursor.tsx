@@ -9,8 +9,10 @@ export default function Cursor() {
   useEffect(() => {
     if (!cursorRef.current) return;
 
+    const cursor = cursorRef.current;
+
     document.addEventListener('mousemove', (e) => {
-      gsap.to(cursorRef.current, {
+      gsap.to(cursor, {
         x: e.x - 8,
         y: e.y - 8,
         duration: 0.7,
@@ -19,7 +21,7 @@ export default function Cursor() {
     });
 
     document.addEventListener('mousedown', () => {
-      gsap.to(cursorRef.current, {
+      gsap.to(cursor, {
         scale: 1.8,
         duration: 0.18,
         ease: 'power1',
@@ -27,7 +29,7 @@ export default function Cursor() {
     });
 
     document.addEventListener('mouseup', () => {
-      gsap.to(cursorRef.current, {
+      gsap.to(cursor, {
         scale: 1,
         duration: 0.18,
         ease: 'power1',
@@ -36,7 +38,7 @@ export default function Cursor() {
 
     return () => {
       document.removeEventListener('mousemove', (e) => {
-        gsap.to(cursorRef.current, {
+        gsap.to(cursor, {
           x: e.x - 8,
           y: e.y - 8,
           duration: 0.7,
@@ -45,7 +47,7 @@ export default function Cursor() {
       });
 
       document.removeEventListener('mousedown', () => {
-        gsap.to(cursorRef.current, {
+        gsap.to(cursor, {
           scale: 1.8,
           duration: 0.18,
           ease: 'power1',
@@ -53,7 +55,7 @@ export default function Cursor() {
       });
 
       document.removeEventListener('mouseup', () => {
-        gsap.to(cursorRef.current, {
+        gsap.to(cursor, {
           scale: 1,
           duration: 0.15,
           ease: 'power1',

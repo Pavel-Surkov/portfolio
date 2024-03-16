@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 export default function LenisScroll() {
   useEffect(() => {
-    (async () => {
+    void (async () => {
       const Lenis = (await import('@studio-freight/lenis')).default;
       const lenis = new Lenis({
         lerp: 0.12,
@@ -14,7 +14,9 @@ export default function LenisScroll() {
 
       gsap.registerPlugin(ScrollTrigger);
 
-      lenis.on('scroll', ScrollTrigger.update);
+      lenis.on('scroll', () => {
+        ScrollTrigger.update();
+      });
 
       gsap.ticker.add((time) => {
         lenis.raf(time * 1000);

@@ -4,9 +4,8 @@ import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 import Project from '@/components/Project';
 import { useGSAP } from '@gsap/react';
-import { z } from 'zod';
-import { projectsSchema } from '@/schemas/project-schema';
-import Link from 'next/link';
+import { type z } from 'zod';
+import { type projectsSchema } from '@/schemas/project-schema';
 
 type Props = {
   data: z.infer<typeof projectsSchema>;
@@ -19,7 +18,6 @@ export default function Projects({ data }: Props) {
 
   const sliderWidth = useRef(0);
 
-  // Strange that width of slider is its scrollWidth + paddingX
   useEffect(() => {
     if (sliderRef.current) {
       const padding = window

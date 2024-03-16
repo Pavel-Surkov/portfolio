@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import Hero from './hero';
+// import Hero from './hero';
 import Projects from './projects';
 import { projectsSchema } from '@/schemas/project-schema';
 import Earth from './earth';

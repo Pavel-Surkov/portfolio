@@ -2,7 +2,7 @@
 import { Canvas, useFrame } from '@react-three/fiber';
 import { PerspectiveCamera, useGLTF } from '@react-three/drei';
 import { OrbitControls } from '@react-three/drei';
-import { Group } from 'three';
+import { type Group } from 'three';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 

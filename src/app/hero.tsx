@@ -35,12 +35,12 @@ export default function Hero() {
       <div ref={titleRef} className="fixed z-0">
         <h1 className="grid grid-cols-[repeat(3,auto)] gap-x-2 text-large font-bold text-gray lg:gap-x-6 [&_span]:relative [&_span]:z-10">
           <div className="col-span-2 col-start-2 flex gap-x-2 lg:gap-x-6">
-            <span>I'm</span>
+            <span>I&apos;m</span>
             <span>Pavel</span>
           </div>
           <span>A</span>
           <div className="relative">
-            <div className="bg-gradient-blob-orange absolute h-full w-full blur-[60px]" />
+            <div className="absolute h-full w-full bg-gradient-blob-orange blur-[60px]" />
             <span>Frontend</span>
           </div>
           <span>Developer</span>
