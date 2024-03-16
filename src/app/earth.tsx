@@ -2,12 +2,12 @@
 import EarthCanvas from '@/components/canvas/EarthCanvas';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useContext, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import gsap from 'gsap';
-import { MobileContext } from '@/components/DeviceContext';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 export default function Earth() {
-  const isMobile = useContext(MobileContext);
+  const isMobile = useMediaQuery('(max-width: 1023px)');
   const sectionRef = useRef<HTMLElement>(null);
   const [tl, setTl] = useState<gsap.core.Timeline | null>(null);
 

@@ -3,10 +3,8 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Cursor from '@/components/Cursor';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-
 import LenisScroll from '@/components/LenisScroll';
 import Footer from './footer';
-import DeviceContext from '@/components/DeviceContext';
 
 const SequelSansDisp = localFont({
   src: '../../public/fonts/SequelSansVFDisp.woff2',
@@ -34,11 +32,9 @@ export default function RootLayout({
       <body
         className={`${StarJedi.variable} ${SequelSansDisp.variable} font-sequel`}
       >
-        <DeviceContext>
-          <Cursor />
-          {children}
-          <Footer />
-        </DeviceContext>
+        <Cursor />
+        {children}
+        <Footer />
         <LenisScroll />
         <SpeedInsights />
       </body>

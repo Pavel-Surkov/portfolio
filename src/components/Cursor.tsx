@@ -1,11 +1,11 @@
 'use client';
-import { useContext, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { MobileContext } from './DeviceContext';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 export default function Cursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
-  const isMobile = useContext(MobileContext);
+  const isMobile = useMediaQuery('(max-width: 1023px)');
 
   useEffect(() => {
     if (!cursorRef.current) return;
