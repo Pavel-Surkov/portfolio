@@ -18,8 +18,9 @@ const StarJedi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: '...',
+  title: 'Surkov Pavel • Frontend developer',
+  description:
+    'Frontend developer who specializes in building modern, user-friendly websites and web applications.',
 };
 
 export default function RootLayout({

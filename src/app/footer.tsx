@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="h-40 bg-black pb-10 pt-10 text-gray">
+    <footer className="h-40 bg-black pb-10 pt-10 text-white">
       <div className="container">
         <div className="flex justify-center">
           <div>
@@ -14,7 +14,7 @@ export default function Footer() {
             <nav className="flex gap-10 font-light">
               <Link
                 href="mailto:surkovv.pavel@gmail.com"
-                className="link tracking-wider text-gray"
+                className="link tracking-wider"
               >
                 Email
               </Link>
@@ -22,7 +22,7 @@ export default function Footer() {
                 href="https://t.me/surkov0"
                 rel="noopener noreferrer"
                 target="_blank"
-                className="link tracking-wide text-gray"
+                className="link tracking-wide"
               >
                 Telegram
               </Link>
@@ -30,7 +30,7 @@ export default function Footer() {
                 href="https://github.com/Pavel-Surkov"
                 rel="noopener noreferrer"
                 target="_blank"
-                className="link tracking-wide text-gray"
+                className="link tracking-wide"
               >
                 GitHub
               </Link>
@@ -38,7 +38,7 @@ export default function Footer() {
                 href="https://docs.google.com/document/d/1x5LjscbzBXuVAfEa3wxlFJeDDiHcfN_D0-9tvCbBh1g/edit?usp=sharing"
                 rel="noopener noreferrer"
                 target="_blank"
-                className="link tracking-wide text-gray"
+                className="link tracking-wide"
               >
                 Resume
               </Link>

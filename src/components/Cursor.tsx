@@ -67,7 +67,7 @@ export default function Cursor() {
   return (
     <div
       ref={cursorRef}
-      className="pointer-events-none fixed left-0 top-0 z-50 hidden h-4 w-4 select-none rounded-full bg-white opacity-80 mix-blend-difference md:inline-block"
+      className="pointer-events-none fixed left-0 top-0 z-50 hidden h-4 w-4 select-none rounded-full bg-white mix-blend-difference md:inline-block"
     />
   );
 }

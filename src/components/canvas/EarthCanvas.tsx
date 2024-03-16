@@ -32,7 +32,7 @@ function Earth({ tl }: Props) {
       ref={ref}
       dispose={null}
       position={[3, 1.2, 0]}
-      rotation={[0.4, 0, 0.85]}
+      rotation={[0.4, 0, 0.89]}
     >
       <group ref={innerRef}>
         <mesh>
