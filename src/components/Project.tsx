@@ -62,7 +62,7 @@ export default function Project({ data }: Props) {
             className={`pointer-events-none relative w-full select-none object-cover ${data.type === 'poster' ? 'h-full' : 'h-auto'}`}
             quality={100}
             width={625}
-            height={1111}
+            height={1063}
             src={data.image}
             alt={`${data.title} project capture`}
           />

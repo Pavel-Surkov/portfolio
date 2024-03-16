@@ -96,7 +96,7 @@ export default function Projects({ data }: Props) {
               <div className="relative grid h-full place-items-center rounded-lg">
                 <div className="text-center">
                   <div className="text-[100px]">👀</div>
-                  <h2 className="mb-2 text-2xl">New porjects Coming Soon</h2>
+                  <h2 className="mb-2 text-2xl">New projects Coming Soon</h2>
                 </div>
               </div>
             </div>
