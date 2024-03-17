@@ -22,7 +22,7 @@ function Stars() {
   useFrame((_, delta) => {
     if (pointsRef.current) {
       pointsRef.current.rotation.x -= delta / 20;
-      pointsRef.current.rotation.y -= delta / 20;
+      // pointsRef.current.rotation.y -= delta / 20;
     }
   });
 
@@ -44,7 +44,7 @@ function Stars() {
 
 export default function StarsCanvas() {
   return (
-    <div className="fixed inset-0 z-[-1] h-screen w-full">
+    <div className="fixed inset-0 z-[-1] h-screen w-screen">
       <Canvas>
         <Suspense fallback={null}>
           <Stars />

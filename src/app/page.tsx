@@ -1,8 +1,7 @@
 import { promises as fs } from 'fs';
-// import Hero from './hero';
+import Hero from './hero';
 import Projects from './projects';
 import { projectsSchema } from '@/schemas/project-schema';
-import Earth from './earth';
 import StarsCanvas from '@/components/canvas/StarsCanvas';
 import Resume from './resume';
 import Skills from './skills';
@@ -16,11 +15,8 @@ export default async function Home() {
 
   return (
     <main className="text-white">
-      <div className="relative">
-        <StarsCanvas />
-        {/* <Hero /> */}
-        <Earth />
-      </div>
+      <StarsCanvas />
+      <Hero />
       <Projects data={data} />
       <Skills />
       <Resume />

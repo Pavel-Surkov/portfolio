@@ -1,54 +1,65 @@
 'use client';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import LightSaberCanvas from '@/components/canvas/LightSaberCanvas';
 
 export default function Hero() {
+  const [tl, setTl] = useState<gsap.core.Timeline | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
-  const titleRef = useRef(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const lightSaberRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const tl = gsap.timeline({
+    const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: 'top',
-        end: `+=${sectionRef.current?.offsetHeight}`,
+        start: 'top top',
+        end: 'bottom center',
         scrub: true,
       },
+      ease: 'none',
     });
 
-    tl.fromTo(
+    setTl(timeline);
+
+    timeline.fromTo(
+      lightSaberRef.current,
+      { xPercent: -60, ease: 'none' },
+      { xPercent: 60, ease: 'none' },
+      'hero'
+    );
+
+    timeline.fromTo(
       titleRef.current,
-      { scale: 1, translateY: 0 },
-      { scale: 0.75, translateY: 100 }
-    ).to(titleRef.current, { opacity: 0, pointerEvents: 'none' });
+      { backgroundPositionX: 100, ease: 'none' },
+      { backgroundPositionX: 0, ease: 'none' },
+      'hero'
+    );
   });
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative flex h-screen items-center justify-center"
-    >
-      <div ref={titleRef} className="fixed z-0">
-        <h1 className="grid grid-cols-[repeat(3,auto)] gap-x-2 text-large font-bold text-gray lg:gap-x-6 [&_span]:relative [&_span]:z-10">
-          <div className="col-span-2 col-start-2 flex gap-x-2 lg:gap-x-6">
-            <span>I&apos;m</span>
-            <span>Pavel</span>
-          </div>
-          <span>A</span>
-          <div className="relative">
-            <div className="absolute h-full w-full bg-gradient-blob-orange blur-[60px]" />
-            <span>Frontend</span>
-          </div>
-          <span>Developer</span>
-          <div className="col-start-3 flex gap-x-2 lg:gap-x-6">
-            <span>for</span>
-            <span>you</span>
-          </div>
-        </h1>
+    <section ref={sectionRef} className="relative h-[300vh]">
+      <div className="sticky top-0 h-screen overflow-hidden">
+        <div
+          ref={lightSaberRef}
+          className="absolute left-0 top-1/2 h-[90%] w-full -translate-x-1/2 -translate-y-1/2 will-change-transform"
+        >
+          {tl && <LightSaberCanvas tl={tl} />}
+        </div>
+        <div className="relative flex h-full items-center justify-center">
+          <h1
+            ref={titleRef}
+            className="bg-gradient-line-shrink transparent-text relative z-10 bg-[length:320%_auto] bg-[0%_50%] text-large font-black text-gray"
+          >
+            <p className="bg-transparent pl-[3.7vw]">I&apos;m Pavel</p>
+            <p className="bg-transparent">Frontend Developer</p>
+            <p className="bg-transparent pr-[9.5vw] text-right"> for you</p>
+          </h1>
+        </div>
       </div>
     </section>
   );
