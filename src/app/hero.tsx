@@ -35,8 +35,8 @@ export default function Hero() {
 
     timeline.fromTo(
       titleRef.current,
-      { backgroundPositionX: 100, ease: 'none' },
-      { backgroundPositionX: 0, ease: 'none' },
+      { backgroundPositionX: '100%', ease: 'none' },
+      { backgroundPositionX: '0%', ease: 'none' },
       'hero'
     );
   });
