@@ -18,6 +18,15 @@ const config: Config = {
         'gradient-line-shrink':
           'linear-gradient(80deg, #000 41%,  #e0ffff 50%, #000 59%)',
       },
+			keyframes: {
+				scroll: {
+					'0%, 100%': {transform: 'translateY(0)'},
+					'50%': {transform: 'translateY(20px)'}
+				}
+			},
+			animation: {
+				'scroll': 'scroll 2s infinite linear'
+			},
       colors: {
         yellow: '#FFFF82',
         dark: '#211951',
@@ -25,7 +34,7 @@ const config: Config = {
         blue: '#071DE4',
         mint: '#15F5BA',
         mixed: '#e32765',
-        gray: { DEFAULT: '#F0F3FF' },
+        gray: { DEFAULT: '#F0F3FF', '100': '#AAA' },
         white: '#FFF',
         black: '#0b0b0e',
       },

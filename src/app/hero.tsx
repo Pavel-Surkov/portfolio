@@ -4,6 +4,7 @@ import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import LightSaberCanvas from '@/components/canvas/LightSaberCanvas';
+import Scroller from '@/components/Scroller';
 
 export default function Hero() {
   const [tl, setTl] = useState<gsap.core.Timeline | null>(null);
@@ -50,17 +51,18 @@ export default function Hero() {
         >
           {tl && <LightSaberCanvas tl={tl} />}
         </div>
-        <div className="relative flex h-full items-center justify-center">
+        <div className="relative flex h-full flex-col items-center justify-center">
           <h1
             ref={titleRef}
-            className="bg-gradient-line-shrink transparent-text relative z-10 bg-[length:320%_auto] bg-[0%_50%] text-large font-black text-gray"
+            className="transparent-text relative z-10 bg-gradient-line-shrink bg-[length:320%_auto] bg-[0%_50%] text-large font-black text-gray"
           >
-            <p className="bg-transparent pl-[3.7vw]">I&apos;m Pavel</p>
-            <p className="bg-transparent">Frontend Developer</p>
-            <p className="bg-transparent pr-[9.5vw] text-right"> for you</p>
+            <p className="bg-transparent pl-[4.6vw]">I&apos;m Pavel</p>
+            <p className="bg-transparent pr-[3.61vw]">Creative Frontend</p>
+            <p className="bg-transparent text-right">Developer</p>
           </h1>
         </div>
       </div>
+      <Scroller />
     </section>
   );
 }
