@@ -3,8 +3,11 @@ import Hero from './hero';
 import Projects from './projects';
 import { projectsSchema } from '@/schemas/project-schema';
 import StarsCanvas from '@/components/canvas/StarsCanvas';
-import Resume from './resume';
-import Skills from './skills';
+import Loader from './loader';
+import dynamic from 'next/dynamic';
+
+const Skills = dynamic(() => import('./skills'));
+const Resume = dynamic(() => import('./resume'));
 
 export default async function Home() {
   const file = await fs.readFile(
@@ -15,6 +18,7 @@ export default async function Home() {
 
   return (
     <main className="text-white">
+      <Loader />
       <StarsCanvas />
       <Hero />
       <Projects data={data} />

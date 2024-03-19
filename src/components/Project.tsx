@@ -65,6 +65,7 @@ export default function Project({ data }: Props) {
             height={1063}
             src={data.image}
             alt={`${data.title} project capture`}
+            loading="lazy"
           />
         </div>
       </Link>
