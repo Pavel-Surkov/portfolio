@@ -58,7 +58,9 @@ export default function Skills() {
           >
             <div className="flex flex-col items-center justify-center gap-16 md:gap-28">
               {SKILLS.map((skill) => (
-                <span key={skill}>{skill}</span>
+                <span key={skill} className="text-center">
+                  {skill}
+                </span>
               ))}
             </div>
           </div>

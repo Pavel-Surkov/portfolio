@@ -31,12 +31,28 @@ function LightSaber({ tl }: { tl: gsap.core.Timeline }) {
 }
 
 export default function LightSaberCanvas({ tl }: { tl: gsap.core.Timeline }) {
+  const lightSaberRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    tl.fromTo(
+      lightSaberRef.current,
+      { xPercent: -60, ease: 'none' },
+      { xPercent: 60, ease: 'none' },
+      'hero'
+    );
+  }, []);
+
   return (
-    <div className="fixed h-screen w-screen overflow-hidden">
-      <Canvas>
-        <LightSaber tl={tl} />
-        <Preload all />
-      </Canvas>
+    <div
+      ref={lightSaberRef}
+      className="absolute left-0 top-1/2 h-[90%] w-full -translate-x-1/2 -translate-y-1/2 will-change-transform"
+    >
+      <div className="fixed h-screen w-screen overflow-hidden">
+        <Canvas>
+          <LightSaber tl={tl} />
+          <Preload all />
+        </Canvas>
+      </div>
     </div>
   );
 }

@@ -3,9 +3,9 @@ import Hero from './hero';
 import Projects from './projects';
 import { projectsSchema } from '@/schemas/project-schema';
 import StarsCanvas from '@/components/canvas/StarsCanvas';
-import Loader from '@/components/Loader';
 import dynamic from 'next/dynamic';
 
+const Loader = dynamic(() => import('@/components/Loader'), { ssr: false });
 const Skills = dynamic(() => import('./skills'));
 const Resume = dynamic(() => import('./resume'));
 

@@ -1,4 +1,5 @@
 'use client';
+import getRandomMessage from '@/static/loading-messages';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { useRef, useState } from 'react';
@@ -10,11 +11,11 @@ export default function Loader() {
   const loaderRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    gsap.to(loaderRef.current, { backgroundPositionX: '0%', duration: 3 });
+    gsap.to(loaderRef.current, { backgroundPositionX: '0%', duration: 3.5 });
     gsap.to(blockRef.current, {
       yPercent: -100,
       duration: 1,
-      delay: 3,
+      delay: 3.5,
       onComplete: () => setIsLoading(false),
     });
   });
@@ -26,9 +27,9 @@ export default function Loader() {
     >
       <div
         ref={loaderRef}
-        className="transparent-text bg-gradient-load bg-[length:200%_auto] bg-[100%_50%] text-[10vw] font-light md:text-large"
+        className="transparent-text bg-gradient-load max-w-full bg-[length:200%_auto] bg-[100%_50%] px-6 text-center text-2xl font-bold leading-relaxed md:text-[6vw]"
       >
-        Loading
+        {getRandomMessage()}
       </div>
     </div>
   ) : null;

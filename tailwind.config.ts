@@ -17,8 +17,7 @@ const config: Config = {
           'linear-gradient(270deg, rgba(255, 255, 255, 0.25), #fff 50%, rgba(255, 255, 255, 0.25))',
         'gradient-line-shrink':
           'linear-gradient(80deg, #000 41%,  #e0ffff 50%, #000 59%)',
-        'gradient-load':
-          'linear-gradient(90deg, #fff 50%, rgba(255, 255, 255, 0) 50.1%)',
+        'gradient-load': 'linear-gradient(90deg, #fff 50%, #666 50.1%)',
       },
       keyframes: {
         scroll: {

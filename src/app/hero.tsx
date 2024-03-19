@@ -5,12 +5,14 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import LightSaberCanvas from '@/components/canvas/LightSaberCanvas';
 import Scroller from '@/components/Scroller';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 export default function Hero() {
   const [tl, setTl] = useState<gsap.core.Timeline | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const lightSaberRef = useRef<HTMLDivElement>(null);
+
+  const isMobile = useMediaQuery('(max-width: 1024px)');
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -28,13 +30,6 @@ export default function Hero() {
     setTl(timeline);
 
     timeline.fromTo(
-      lightSaberRef.current,
-      { xPercent: -60, ease: 'none' },
-      { xPercent: 60, ease: 'none' },
-      'hero'
-    );
-
-    timeline.fromTo(
       titleRef.current,
       { backgroundPositionX: '100%', ease: 'none' },
       { backgroundPositionX: '0%', ease: 'none' },
@@ -45,12 +40,7 @@ export default function Hero() {
   return (
     <section ref={sectionRef} className="relative h-[300vh]">
       <div className="sticky top-0 h-screen overflow-hidden">
-        <div
-          ref={lightSaberRef}
-          className="absolute left-0 top-1/2 h-[90%] w-full -translate-x-1/2 -translate-y-1/2 will-change-transform"
-        >
-          {tl && <LightSaberCanvas tl={tl} />}
-        </div>
+        {!isMobile && tl ? <LightSaberCanvas tl={tl} /> : null}
         <div className="relative flex h-full flex-col items-center justify-center">
           <h1
             ref={titleRef}
