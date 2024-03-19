@@ -103,6 +103,13 @@ body {
   }
 }
 
+@media screen and (max-width: 786px) {
+  .titles {
+    height: 200vh;
+    transform: translateX(-50%) perspective(260px) rotateX(25deg);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

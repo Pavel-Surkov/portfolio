@@ -48,15 +48,15 @@ export default function Skills() {
   return (
     <section ref={sectionRef} className="relative h-[350vh]">
       <div className="sticky top-0 h-screen">
-        <h2 className="font-star stroke-text-yellow pt-[5vh] text-center text-[8vw]">
+        <h2 className="stroke-text-yellow pt-[8vh] text-center font-star text-[12vw] md:pt-[5vh] md:text-[8vw]">
           Skills
         </h2>
         <div className="titles">
           <div
             ref={skillsRef}
-            className="text-yellow flex flex-col gap-10 text-[14vw]"
+            className="flex flex-col gap-10 text-[14vw] text-yellow"
           >
-            <div className="flex flex-col items-center justify-center gap-24">
+            <div className="flex flex-col items-center justify-center gap-16 md:gap-28">
               {SKILLS.map((skill) => (
                 <span key={skill}>{skill}</span>
               ))}

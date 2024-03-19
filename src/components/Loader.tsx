@@ -26,7 +26,7 @@ export default function Loader() {
     >
       <div
         ref={loaderRef}
-        className="transparent-text bg-gradient-load bg-[length:200%_auto] bg-[100%_50%] text-large font-light"
+        className="transparent-text bg-gradient-load bg-[length:200%_auto] bg-[100%_50%] text-[10vw] font-light md:text-large"
       >
         Loading
       </div>

@@ -41,7 +41,7 @@ const config: Config = {
         black: '#0b0b0e',
       },
       fontSize: {
-        large: '7dvw',
+        large: '7vw',
       },
       container: {
         center: true,

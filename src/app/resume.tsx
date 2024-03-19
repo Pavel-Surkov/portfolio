@@ -8,9 +8,11 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
 import { useRef } from 'react';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 export default function Resume() {
   const sectionRef = useRef<HTMLElement>(null);
+  const isDesktop = useMediaQuery('(min-width: 768px)');
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -34,7 +36,7 @@ export default function Resume() {
       className="relative flex min-h-[calc(100vh-160px)] flex-col justify-center overflow-hidden bg-black py-32"
     >
       <div className="container">
-        <div className="mb-10 text-[5vw] font-black tracking-wide">
+        <div className="mb-6 text-[9vw] font-black tracking-wide sm:mb-10 md:text-[5vw]">
           <p>
             <span className="opacity-70">
               Interested? <br />
@@ -49,11 +51,13 @@ export default function Resume() {
               >
                 RESUME
               </Link>
-              <ResumeIcon className="absolute right-0 top-1/2 inline-block h-[30vw] w-[30vw] -translate-y-1/2 translate-x-full transition-transform duration-300 group-hover:-translate-x-24 xl:group-hover:-translate-x-1/4" />
+              {isDesktop && (
+                <ResumeIcon className="absolute right-0 top-1/2 inline-block h-[30vw] w-[30vw] -translate-y-1/2 translate-x-full transition-transform duration-300 group-hover:-translate-x-24 xl:group-hover:-translate-x-1/4" />
+              )}
             </span>
           </p>
         </div>
-        <div className="text-[4vw] font-black tracking-wide">
+        <div className="text-[8vw] font-black tracking-wide md:text-[4vw]">
           <p>
             <span className="opacity-70">
               Or contact me <br />
@@ -63,14 +67,18 @@ export default function Resume() {
               <Link href="mailto:surkovv.pavel@gmail.com" className="link">
                 Email
               </Link>
-              <EmailIcon className="absolute right-0 top-1/2 inline-block h-[30vw] w-[30vw] -translate-y-1/2 translate-x-full transition-transform duration-300 group-hover:-translate-x-24 xl:group-hover:-translate-x-1/4" />
+              {isDesktop && (
+                <EmailIcon className="absolute right-0 top-1/2 inline-block h-[30vw] w-[30vw] -translate-y-1/2 translate-x-full transition-transform duration-300 group-hover:-translate-x-24 xl:group-hover:-translate-x-1/4" />
+              )}
             </span>
             <span className="opacity-70">{' or '}</span>
             <span className="group">
               <Link href="https://t.me/surkov0" className="link">
                 Telegram
               </Link>
-              <TelegramIcon className="absolute right-0 top-1/2 inline-block aspect-square h-[30vw] w-[30vw] -translate-y-1/2 translate-x-full text-[50vh] transition-transform duration-300 group-hover:-translate-x-24 xl:group-hover:-translate-x-1/4" />
+              {isDesktop && (
+                <TelegramIcon className="absolute right-0 top-1/2 inline-block aspect-square h-[30vw] w-[30vw] -translate-y-1/2 translate-x-full text-[50vh] transition-transform duration-300 group-hover:-translate-x-24 xl:group-hover:-translate-x-1/4" />
+              )}
             </span>
           </p>
         </div>

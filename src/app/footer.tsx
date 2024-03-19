@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <Time />
             <div className="mb-6 h-px w-full bg-gradient-line" />
-            <nav className="flex gap-10 font-light">
+            <nav className="flex gap-6 font-light md:gap-10">
               <Link
                 href="mailto:surkovv.pavel@gmail.com"
                 className="link tracking-wider"

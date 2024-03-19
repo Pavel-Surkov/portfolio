@@ -3,7 +3,7 @@ import Hero from './hero';
 import Projects from './projects';
 import { projectsSchema } from '@/schemas/project-schema';
 import StarsCanvas from '@/components/canvas/StarsCanvas';
-import Loader from './loader';
+import Loader from '@/components/Loader';
 import dynamic from 'next/dynamic';
 
 const Skills = dynamic(() => import('./skills'));

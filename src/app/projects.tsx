@@ -77,7 +77,7 @@ export default function Projects({ data }: Props) {
         <div className="relative h-4">
           <div
             ref={progressRef}
-            className="absolute left-0 right-0 top-0 h-full origin-left scale-x-0 bg-mixed"
+            className="absolute left-0 right-0 top-0 h-full origin-left scale-x-0 bg-white bg-opacity-70"
           />
         </div>
         <div
@@ -85,7 +85,7 @@ export default function Projects({ data }: Props) {
           className="container relative box-border flex h-screen flex-grow items-stretch py-[5dvh]"
           style={{ width: sliderWidth.current ?? 0 }}
         >
-          <div className="vertical relative flex rotate-180 justify-end pl-10 text-[14dvh] font-black uppercase tracking-wide text-white">
+          <div className="vertical relative flex rotate-180 justify-end pl-10 pr-2 text-[14dvh] font-black uppercase tracking-wide text-white">
             Projects
           </div>
           {data.projects.map((project) => (
