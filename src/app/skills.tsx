@@ -46,9 +46,9 @@ export default function Skills() {
   });
 
   return (
-    <section ref={sectionRef} className="relative h-[350vh]">
+    <section ref={sectionRef} className="relative h-[350svh]">
       <div className="sticky top-0 h-screen">
-        <h2 className="stroke-text-yellow pt-[8vh] text-center font-star text-[12vw] md:pt-[5vh] md:text-[8vw]">
+        <h2 className="stroke-text-yellow pt-[8svh] text-center font-star text-[12vw] md:pt-[5svh] md:text-[8vw]">
           Skills
         </h2>
         <div className="titles">

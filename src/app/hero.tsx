@@ -38,7 +38,7 @@ export default function Hero() {
   });
 
   return (
-    <section ref={sectionRef} className="relative h-[300vh]">
+    <section ref={sectionRef} className="relative h-[300svh]">
       <div className="sticky top-0 h-screen overflow-hidden">
         {!isMobile && tl ? <LightSaberCanvas tl={tl} /> : null}
         <div className="relative flex h-full flex-col items-center justify-center">

@@ -85,13 +85,13 @@ export default function Projects({ data }: Props) {
           className="container relative box-border flex h-screen flex-grow items-stretch py-[5svh]"
           style={{ width: sliderWidth.current ?? 0 }}
         >
-          <div className="vertical relative flex rotate-180 justify-end pl-10 pr-2 text-[14dvh] font-black uppercase tracking-wide text-white">
+          <div className="vertical relative flex rotate-180 justify-end pl-10 pr-2 text-[14svh] font-black uppercase tracking-wide text-white">
             Projects
           </div>
           {data.projects.map((project) => (
             <Project data={project} key={project.title} />
           ))}
-          <article className="border-box colored-shadow relative mr-10 aspect-[9/16] h-full flex-shrink-0 self-end rounded-2xl text-white shadow-xl last:mr-0 md:h-[calc(100%-48px)]">
+          <article className="border-box colored-shadow relative mr-10 aspect-[9/16] h-[calc(100%-44px)] flex-shrink-0 self-end rounded-2xl text-white shadow-xl last:mr-0 md:h-[calc(100%-48px)]">
             <div className="flex h-full flex-col rounded-2xl border border-[#FFFFFF22] bg-black pb-0">
               <div className="relative grid h-full place-items-center rounded-lg">
                 <div className="text-center">

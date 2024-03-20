@@ -86,7 +86,7 @@ body {
   transform-origin: 50% 100%;
   font-weight: bold;
   overflow: hidden;
-  height: 350vh;
+  height: 350svh;
   width: 80vw;
   bottom: 0;
   left: 50%;
@@ -105,7 +105,7 @@ body {
 
 @media screen and (max-width: 786px) {
   .titles {
-    height: 200vh;
+    height: 200svh;
     transform: translateX(-50%) perspective(260px) rotateX(25deg);
   }
 }

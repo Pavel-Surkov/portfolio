@@ -33,7 +33,7 @@ export default function Resume() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex min-h-[calc(100vh-160px)] flex-col justify-center overflow-hidden bg-black py-32"
+      className="relative flex min-h-[calc(100svh-160px)] flex-col justify-center overflow-hidden bg-black py-32"
     >
       <div className="container">
         <div className="mb-6 text-[9vw] font-black tracking-wide sm:mb-10 md:text-[5vw]">
@@ -77,7 +77,7 @@ export default function Resume() {
                 Telegram
               </Link>
               {isDesktop && (
-                <TelegramIcon className="absolute right-0 top-1/2 inline-block aspect-square h-[30vw] w-[30vw] -translate-y-1/2 translate-x-full text-[50vh] transition-transform duration-300 group-hover:-translate-x-24 xl:group-hover:-translate-x-1/4" />
+                <TelegramIcon className="absolute right-0 top-1/2 inline-block aspect-square h-[30vw] w-[30vw] -translate-y-1/2 translate-x-full text-[50svh] transition-transform duration-300 group-hover:-translate-x-24 xl:group-hover:-translate-x-1/4" />
               )}
             </span>
           </p>
