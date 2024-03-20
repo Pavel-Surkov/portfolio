@@ -45,7 +45,7 @@ const config: Config = {
       container: {
         center: true,
         padding: {
-          DEFAULT: '3dvw',
+          DEFAULT: '3vw',
         },
         screens: {
           sm: '100%',
