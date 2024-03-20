@@ -50,7 +50,7 @@ export default function Project({ data }: Props) {
       >
         <h2
           ref={titleRef}
-          className="mb-3 translate-y-12 scale-75 whitespace-nowrap text-center text-2xl font-bold tracking-wider text-white mix-blend-difference xl:text-3xl"
+          className="mb-2 whitespace-nowrap text-center text-2xl font-bold tracking-wider text-white mix-blend-difference md:mb-3 md:translate-y-12 md:scale-75 xl:text-3xl"
         >
           {data.title}
         </h2>
