@@ -59,10 +59,8 @@ export default function Project({ data }: Props) {
           className="relative h-full overflow-hidden rounded-lg"
         >
           <Image
-            className={`pointer-events-none relative w-full select-none object-cover ${data.type === 'poster' ? 'h-full' : 'h-auto'}`}
-            quality={100}
-            width={625}
-            height={1063}
+            className={`pointer-events-none relative w-full select-none object-cover object-top ${data.type === 'poster' ? 'h-full' : 'h-auto'}`}
+            fill={true}
             src={data.image}
             alt={`${data.title} project capture`}
             loading="lazy"
