@@ -82,7 +82,7 @@ export default function Projects({ data }: Props) {
         </div>
         <div
           ref={sliderRef}
-          className="container relative box-border flex h-screen flex-grow items-stretch py-[5svh]"
+          className="container relative box-border flex h-screen flex-grow items-stretch pb-[7svh] pt-[4svh] md:py-[5svh]"
           style={{ width: sliderWidth.current ?? 0 }}
         >
           <div className="vertical relative flex rotate-180 justify-end pl-10 pr-2 text-[14svh] font-black uppercase tracking-wide text-white">

@@ -38,7 +38,7 @@ export default function Project({ data }: Props) {
   return (
     <article
       ref={projectRef}
-      className="border-box colored-shadow relative mr-10 aspect-[9/16] flex-shrink-0 rounded-2xl text-black shadow-xl last:mr-0"
+      className="border-box colored-shadow relative mr-8 aspect-[9/16] max-h-full flex-shrink-0 rounded-2xl text-black shadow-xl last:mr-0 md:mr-10"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

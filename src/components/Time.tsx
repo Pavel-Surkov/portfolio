@@ -5,6 +5,7 @@ export default function Time() {
   const date = DateTime.now()
     .setZone('Asia/Novosibirsk')
     .toLocaleString({
+      hourCycle: 'h12',
       hour: 'numeric',
       minute: '2-digit',
       hour12: true,
