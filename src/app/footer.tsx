@@ -19,7 +19,7 @@ export default function Footer() {
                 Email
               </Link>
               <Link
-                href="https://t.me/surkov0"
+                href="https://t.me/youngpashkaa"
                 rel="noopener noreferrer"
                 target="_blank"
                 className="link tracking-wide"

@@ -73,7 +73,7 @@ export default function Resume() {
             </span>
             <span className="opacity-70">{' or '}</span>
             <span className="group">
-              <Link href="https://t.me/surkov0" className="link">
+              <Link href="https://t.me/youngpashkaa" className="link">
                 Telegram
               </Link>
               {isDesktop && (
