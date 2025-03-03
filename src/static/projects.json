@@ -1,6 +1,12 @@
 {
   "projects": [
     {
+      "title": "Dark Forest",
+      "image": "/images/dark-forest.jpg",
+      "link": "https://phaser-pixelart.vercel.app",
+      "type": "screen"
+    },
+    {
       "title": "TradeVibe",
       "image": "/images/tradevibe.jpeg",
       "link": "https://tradevibe.com/",

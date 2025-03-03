@@ -22,7 +22,6 @@ function Stars() {
   useFrame((_, delta) => {
     if (pointsRef.current) {
       pointsRef.current.rotation.x -= delta / 20;
-      // pointsRef.current.rotation.y -= delta / 20;
     }
   });
 
